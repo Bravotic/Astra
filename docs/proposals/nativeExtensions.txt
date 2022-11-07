@@ -1,0 +1,4 @@
+Native Extensions
+Collin McKinley
+
+This proposal talks about adding in so-called "Native extensions", this would allow programmers to load a dynamic library, a dll, so, or dynlib, and access functions within. This would allow for Astra to be expanded in ways not previously realized. This could also cause massive instability, and would not be possible on all platforms. That's about it for now.

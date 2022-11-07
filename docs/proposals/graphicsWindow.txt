@@ -1,0 +1,15 @@
+How will graphics work?
+Collin McKinley
+
+Our graphics window should act more as a library to Astra than the main program under which Astra runs. This means that the window should largely NOT be in control of anything other than window-ing. This means the window should expose many of its functions to a library which Astra can call upon. This would include functions like "draw a pixel to the screen at (x,y)", "set color of background, foreground, etc", "move cursor", "print text", etc. This would also allow third party binary extensions to access the window and its properties. This would allow for complicated graphics which would not be possible to be made in BASIC be able to run and be controlled within the Astra window, making everything feel as if it is coming from Astra.
+
+Some functions that probably should be implemented (this may grow or shrink if I get around to updating it ever):
+	
+	"Draw a pixel at (x,y) with color"
+	"Print text/character"
+	"Move cursor"
+	"Get color/text at (x,y)"
+	"Get key down"
+	"Get text"
+	"Set border/background/text color"
+	
