@@ -1,0 +1,18 @@
+How will basic programs be stored in memory?
+Collin McKinley
+
+Well, following the model the Commodore 64 used is probably a good start. The C64 used a memory model that looks like the following.
+
+	16-bit Address to next instruction
+	16-bit Line Number
+	Rest of the data terminated with NULL
+
+This approach looks pretty nice and easy to follow. However using 16-bit memory addresses may be too little, that may be upgraded to 32-bit or 64-bit. It should not cause any problems with compatibility since Astra will be interpreted and/or JIT compiled, which means the code is compiled at runtime, therefore can be stored in memory differently for every system. This will also let us represent the whole BASIC memory as a C struct, which may look something like this:
+
+	struct {
+		short nextAddress;
+		short lineNumber;
+		char* data;	
+	} BASIC_MEMORY;
+
+An array of these structs could be kept in an Array for easy access. Basically just some food for thought. This may be way too oversimplified for the scope of this project.
