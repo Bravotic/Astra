@@ -9,7 +9,7 @@ set(HEADERS
 
 project(Astra)
 
-add_executable(crow src/crowlang.c ${FILES} ${HEADERS})
+add_executable(Astra ${FILES} ${HEADERS})
 
-target_include_directories(crow PUBLIC include/)
+target_include_directories(Astra PUBLIC include/)
 
